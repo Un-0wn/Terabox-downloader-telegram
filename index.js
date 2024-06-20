@@ -20,13 +20,15 @@ async function main() {
     }
   });
 
-  bot.on("message", async (ctx) => {
+  bot.command("node", async (ctx) => {
     if (ctx.message && ctx.message.text) {
       const messageText = ctx.message.text;
       if (
         messageText.includes("terabox.com") ||
         messageText.includes("teraboxapp.com")
       ) {
+        const commandArgs = ctx.message.text.split(' ');
+        console.error(commandArgs); 
         //const parts = messageText.split("/");
         //const linkID = parts[parts.length - 1];
 
