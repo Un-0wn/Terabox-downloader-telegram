@@ -27,7 +27,7 @@ async function main() {
         messageText.includes("terabox.com") ||
         messageText.includes("teraboxapp.com")
       ) { 
-        const modifiedText = messageText.replace("/node", "");
+        const modifiedText = messageText.replace("/node ", "");
 
         console.error(modifiedText); 
         //const parts = messageText.split("/");
@@ -35,7 +35,7 @@ async function main() {
 
         // ctx.reply(linkID)
 
-        const details = await getDetails(messageText);
+        const details = await getDetails(modifiedText);
         if (details && details.direct_link) {
           try {
             ctx.reply(`Sending Files Please Wait.!!`);
