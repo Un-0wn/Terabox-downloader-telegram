@@ -27,7 +27,7 @@ async function main() {
         messageText.includes("terabox.com") ||
         messageText.includes("teraboxapp.com")
       ) { 
-        let modifiedText = text.replace("/node", "");
+        const modifiedText = messageText.replace("/node", "");
 
         console.error(modifiedText); 
         //const parts = messageText.split("/");
