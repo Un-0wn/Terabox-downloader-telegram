@@ -36,10 +36,10 @@ async function main() {
         // ctx.reply(linkID)
 
         const details = await getDetails(modifiedText);
-        if (details && details.link) {
+        if (details && details.direct_link) {
           try {
             ctx.reply(`Sending Files Please Wait.!!`);
-            sendFile(details.link, ctx);
+            sendFile(details.direct_link, ctx);
           } catch (e) {
             console.error(e); // Log the error for debugging
           }
