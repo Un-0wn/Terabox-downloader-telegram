@@ -27,8 +27,9 @@ async function main() {
         messageText.includes("terabox.com") ||
         messageText.includes("teraboxapp.com")
       ) {
-        const commandArgs = ctx.message.text.split(' ');
-        console.error(commandArgs); 
+        let modifiedText = text.replace("/node", "");
+
+        console.error(modifiedText); 
         //const parts = messageText.split("/");
         //const linkID = parts[parts.length - 1];
 
